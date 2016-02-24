@@ -6,35 +6,28 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""{{{
 let s:save_cpo = &cpo
 set cpo&vim
+
+let s:vital = vital#of("binascii")
+let s:string = s:vital.import("Data.String")
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""}}}
 
 " PUBLIC FUNCTIONS {{{
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+function! binascii#dec_to_hex(dec) abort "{{{2
+    return s:string.nr2hex(a:dec)
+endfunction "}}}2
+
+function! binascii#bin_to_dec(bin) abort "{{{2
+    let bin = a:bin
+    if !s:string.starts_with(bin, "0b")
+        let bin = "0b" . bin
+    endif
+    return eval(bin)
+endfunction "}}}2
+
 function! binascii#bin_to_hex(bin) abort "{{{2
-    let x = {
-                \ '0000' : '0',
-                \ '0001' : '1',
-                \ '0010' : '2',
-                \ '0011' : '3',
-                \ '0100' : '4',
-                \ '0101' : '5',
-                \ '0110' : '6',
-                \ '0111' : '7',
-                \ '1000' : '8',
-                \ '1001' : '9',
-                \ '1010' : 'a',
-                \ '1011' : 'b',
-                \ '1100' : 'c',
-                \ '1101' : 'd',
-                \ '1110' : 'e',
-                \ '1111' : 'f'
-                \ }
-    let result = ''
-    let number = split(a:bin, '....\zs')
-    for char in number
-        let result .= x[char]
-    endfor
-    return result
+    let dec = binascii#bin_to_dec(a:bin)
+    return binascii#dec_to_hex(dec)
 endfunction "}}}2
 
 function! binascii#hex_to_bin(number) abort "{{{2
