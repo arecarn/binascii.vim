@@ -1,0 +1,11 @@
+Execute ():
+  AssertEqual binascii#bin_to_dec('01110000'), 112
+
+Execute ():
+  AssertEqual binascii#bin_to_dec('1110000'), 112
+
+Execute ():
+  AssertEqual binascii#bin_to_dec('01010101'), 85
+
+Execute ():
+  AssertEqual binascii#bin_to_dec('1010101'), 85
