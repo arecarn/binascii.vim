@@ -1,0 +1,42 @@
+*template*                       Template Tagline
+
+                        Template    By Ryan Carney~
+
+                                                                *template.txt*
+
+Description ........................................ |template-description|
+Usage .............................................. |template-usage|
+Configuration ...................................... |template-configuration|
+
+==============================================================================
+DESCRIPTION                                             *template-description*
+
+==============================================================================
+USAGE                                                         *template-usage*
+
+                                                *t*
+t                       Correct next misspelling forward with 1st suggestion
+                        then return to old position
+                        Plug mapping: `<Plug>(template)`
+
+                                                *v_T*
+v_T                     Correct next misspelling backward with 1st suggestion
+                        then return to old position
+                        Plug mapping: `<Plug>(visual-template)`
+
+==============================================================================
+CONFIGURATION                                         *template-configuration*
+
+Example an alternate configuration:~
+
+imap <leader>t <Plug>(template))
+xmap <leader>t <Plug>(visual-template))
+
+------------------------------------------------------------------------------
+g:template_default_mapping~
+
+If unset disables the default mappings.
+
+default value: 1
+
+vim:tw=78:ts=8:ft=help:norl:fdm=manual:
