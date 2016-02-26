@@ -1,0 +1,39 @@
+*binascii* number and string conversions
+
+                                  binascii
+
+Description ........................................... |binascii-description|
+Usage ................................................. |binascii-usage|
+    Commands .......................................... |binascii-commands|
+
+
+                                                                *binascii.txt*
+
+==============================================================================
+DESCRIPTION                                             *binascii-description*
+
+Here's a description of binascii
+
+==============================================================================
+USAGE                                                         *binascii-usage*
+
+------------------------------------------------------------------------------
+COMMANDS                                                   *binascii-commands*
+                                                *Num*
+:Num {number}           Gives Information about a NUMBER e.g. 15, 0xF, or
+                        0b1111
+
+                                                *Char*
+:Char {character}       Gives Information about a CHARACTER e.g. a, ®, or ü
+
+
+                                                *Hex2str*
+:Hex2str {hexadecimal}  Converts Hex String into an actual string
+
+
+                                                *:Str2Hex*
+:Str2Hex {binary}       Converts a String into a Hex string, but first asks
+                        for a byte separator
+
+==============================================================================
+vim:tw=78:ts=8:ft=help:norl:fdm=manual:
