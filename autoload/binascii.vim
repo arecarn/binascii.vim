@@ -88,14 +88,6 @@ function! binascii#str_to_hex(str) abort "{{{2
     return  toupper(hex_str)
 endfunction "}}}2
 
-function! binascii#bin_info(bin) abort "{{{2
-    let hex = binascii#bin_to_hex(a:bin)
-    let number = eval('0x' . hex)
-    let char = nr2char(number)
-    let bin = a:bin
-    return printf("%d, 0x%02x, '%s' 0b%s", number, number, char, bin)
-endfunction "}}}2
-
 function! binascii#char_info(char) abort "{{{2
     let number = char2nr(a:char)
     let char = a:char
