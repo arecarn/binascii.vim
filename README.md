@@ -1,13 +1,18 @@
+Binascii
+========
+
+Number and String Character Conversions
+
 Usage
 -----
-* `:Num NUMBER`
+* `:Num {number}`
   * Gives Information about a NUMBER e.g. 15, 0xF, or 0b1111
 
-* `:Char CHARACTER`
+* `:Char {character}`
   * Gives Information about a CHARACTER e.g. a, ®, or ü
 
-* `:Hex2str HEXADECIMAL`
+* `:Hex2str {hexadecimal}`
   * Converts Hex String into an actual string
 
-* `:Str2Hex BINARY`
+* `:Str2Hex {string}`
   * Converts a String into a Hex string, but first asks for a byte separator
