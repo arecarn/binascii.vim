@@ -7,8 +7,9 @@
 let s:save_cpo = &cpo
 set cpo&vim
 
-let s:vital = vital#of("binascii")
-let s:string = s:vital.import("Data.String")
+let s:vital = vital#of('binascii')
+let s:string = s:vital.import('Data.String')
+let s:prelude = s:vital.import('Prelude')
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""}}}
 
 " PUBLIC FUNCTIONS {{{
@@ -19,8 +20,8 @@ endfunction "}}}2
 
 function! binascii#bin_to_dec(bin) abort "{{{2
     let bin = a:bin
-    if !s:string.starts_with(bin, "0b")
-        let bin = "0b" . bin
+    if !s:string.starts_with(bin, '0b')
+        let bin = '0b' . bin
     endif
     return eval(bin)
 endfunction "}}}2
@@ -58,7 +59,8 @@ function! binascii#hex_to_bin(number) abort "{{{2
 endfunction "}}}2
 
 function! binascii#hex_to_str(hex_str) abort "{{{2
-    let separator = nr2char(getchar())
+    echomsg 'Input A Hex String Separator Character A Press Enter To Continue'
+    let separator = s:prelude.getchar()
     let hex_str = substitute(a:hex_str, separator, '', 'ge')
 
     let str = ''
@@ -69,7 +71,8 @@ function! binascii#hex_to_str(hex_str) abort "{{{2
 endfunction "}}}2
 
 function! binascii#str_to_hex(str) abort "{{{2
-    let separator = nr2char(getchar())
+    echomsg 'Input A Hex String Separator Character A Press Enter To Continue'
+    let separator = s:prelude.getchar()
 
     if separator == "\r"
         let separator = ''
