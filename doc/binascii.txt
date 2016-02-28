@@ -1,24 +1,24 @@
 *binascii* number and string character conversions
 
-                                  binascii
+                                  binascii~
 
-Description ........................................... |binascii-description|
-Usage ................................................. |binascii-usage|
-    Commands .......................................... |binascii-commands|
+Description ............................................. |binascii-description|
+Usage ................................................... |binascii-usage|
+    Commands ............................................ |binascii-commands|
 
-
-                                                                *binascii.txt*
-
-==============================================================================
-DESCRIPTION                                             *binascii-description*
-
-Number and string character conversions with a few simple commands.
+                                                                  *binascii.txt*
 
 ==============================================================================
-USAGE                                                         *binascii-usage*
+DESCRIPTION                                               *binascii-description*
+
+A handily collection of conversion tools for numbers and strings and
+characters.
+
+==============================================================================
+USAGE                                                           *binascii-usage*
 
 ------------------------------------------------------------------------------
-COMMANDS                                                   *binascii-commands*
+COMMANDS                                                     *binascii-commands*
                                                 *:Num*
 :Num {number}           Gives Information about a {number} e.g. 15, 0xF, or
                         0b1111

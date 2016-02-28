@@ -1,7 +1,7 @@
-Binascii
+binascii
 ========
+A handily collection of conversion tools for numbers and strings and characters.
 
-Number and String Character Conversions
 
 Usage
 -----
